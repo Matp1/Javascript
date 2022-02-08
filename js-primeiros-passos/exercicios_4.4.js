@@ -104,4 +104,40 @@ let leitor = {
     }
     return true;
   }
-  console.log(verificaPalindrome('arara'));
+  console.log(verificaPalindrome('arara'))
+  console.log(verificaPalindrome('desenvolvimento'))
+
+  function maiorValor(numeros){
+    let maiorIndice = 0
+      for(let key in numeros){
+          if(numeros[maiorIndice] < numeros[key] ){
+            maiorIndice = key
+          }
+      }
+      return maiorIndice
+  }
+
+  console.log(maiorValor([2, 3, 6, 7, 10, 1]));
+
+
+function menorValor(numeros){
+    let menorindice = 0
+    for(let key in numeros){
+        if (numeros[menorindice] > numeros[key]){
+            menorindice = key
+        }
+    }
+    return menorindice
+}  
+console.log(menorValor([2, 4, 6, 7, 10, 0, -3]))
+
+function maiorNome(nomes){
+    let maiorNome = nomes[0]
+    for(let key in nomes){
+        if(maiorNome.length < nomes[key].length){
+            maiorNome = nomes[key].length
+        }
+    } 
+    return maiorNome
+}
+console.log(maiorNome(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']))
